@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════
-   EVO ENGINE — Motor do Chatbot
+   BRUNINHO ENGINE — Motor do Chatbot
    Depende de: config.js, flows.js
 ═══════════════════════════════════ */
 
@@ -32,7 +32,7 @@ function disableChips() {
   });
 }
 
-/* Navega para um flow, exibindo a mensagem do usuário e a resposta da Evo */
+/* Navega para um flow, exibindo a mensagem do usuário e a resposta do Bruninho */
 function runFlow(id, label) {
   const f = flows[id];
   if (!f) return;
@@ -44,18 +44,18 @@ function runFlow(id, label) {
 /* Mensagem de boas vindas ao abrir o chat */
 function startChat() {
   setTimeout(() => botMsg(
-    'Olá! Me chamo <strong>Evo</strong>, a recepcionista digital do <strong>Bruno Freitas Nutricionista</strong>. 😊<br><br>Pra te ajudar melhor — qual é o seu objetivo principal?',
+    'Olá! Eu sou o <strong>Assistente Bruninho</strong>, o assistente digital do <strong>Bruno Freitas Nutricionista</strong>. 😊<br><br>Pra te ajudar melhor — qual é o seu objetivo principal?',
     flows.inicio.chips
   ), 450);
 }
 
-/* Renderiza mensagem da Evo com indicador de digitação */
+/* Renderiza mensagem do Bruninho com indicador de digitação */
 function botMsg(html, chips) {
   const a = document.getElementById('chat-area');
 
   const td = document.createElement('div');
   td.className = 'typing-dot';
-  td.innerHTML = `<img src="${CONFIG.mascotThinking}" alt=""><span></span><span></span><span></span>`;
+  td.innerHTML = `<span class="b-ava">B</span><span></span><span></span><span></span>`;
   a.appendChild(td);
   a.scrollTop = a.scrollHeight;
 
@@ -66,7 +66,7 @@ function botMsg(html, chips) {
 
     const lbl = document.createElement('div');
     lbl.className = 'mlbl';
-    lbl.innerHTML = `<img class="mlbl-ava" src="${CONFIG.mascotPointing}" alt="">Evo · Evolvify`;
+    lbl.innerHTML = `<span class="b-ava mlbl-ava">B</span>Assistente Bruninho`;
     a.appendChild(lbl);
 
     const msg = document.createElement('div');

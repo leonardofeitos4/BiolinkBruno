@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════
-   FLOWS — Evo Recepcionista Digital
+   FLOWS — Assistente Bruninho
 
    Estrutura de cada flow:
    {

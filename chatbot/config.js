@@ -7,8 +7,6 @@ const CONFIG = {
   WA: '5583999953846',
   typingDelayMin: 2800,
   typingDelayRandom: 400,
-  mascotThinking: 'assets/mascotes/mascotepensando.svg',
-  mascotPointing: 'assets/mascotes/mascoteapontando.svg',
 };
 
 function waLink(msg) {

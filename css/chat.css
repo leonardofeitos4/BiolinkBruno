@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════
-   CHAT PAGE — Evo
+   CHAT PAGE — Assistente Bruninho
 ═══════════════════════════════════ */
 #page-chat{display:flex;flex-direction:column}
 
@@ -16,11 +16,11 @@
 /* Labels */
 .mlbl{font-size:10px;color:var(--dim);margin-bottom:2px;display:flex;align-items:center;gap:5px}
 .mlbl.u{justify-content:flex-end}
-.mlbl-ava{width:20px;height:20px;object-fit:contain;display:inline-block;vertical-align:middle}
+.mlbl-ava{width:20px;height:20px;font-size:11px;vertical-align:middle}
 
 /* Typing indicator */
 .typing-dot{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--card);border:1px solid rgba(122,226,58,.1);border-radius:4px 14px 14px 14px;animation:fadeU .28s ease both}
-.typing-dot img{width:32px;height:32px;object-fit:contain;animation:bob 1s ease-in-out infinite}
+.typing-dot .b-ava{width:28px;height:28px;background:linear-gradient(135deg,var(--g),var(--g2));font-size:15px;animation:bob 1s ease-in-out infinite}
 .typing-dot span{width:6px;height:6px;background:var(--g);border-radius:50%;animation:td 1.2s infinite}
 .typing-dot span:nth-child(2){animation-delay:.2s}
 .typing-dot span:nth-child(3){animation-delay:.4s}

@@ -35,6 +35,7 @@
 .cico img{width:100%;height:100%;object-fit:cover;display:block}
 .cico svg{width:22px;height:22px;display:block}
 .cico.photo-ico{overflow:hidden;padding:0}
+.cico .b-ava{width:100%;height:100%;border-radius:inherit;font-size:20px}
 .wa-ico{background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.2)}
 .ig-ico{background:rgba(225,48,108,.1);border:1px solid rgba(225,48,108,.15)}
 .cal-ico{background:rgba(122,226,58,.1);border:1px solid rgba(122,226,58,.18)}
@@ -114,7 +115,7 @@
 .fab{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:21px;border:none;cursor:pointer;transition:transform .22s,box-shadow .22s;position:relative;text-decoration:none}
 .fab:active{transform:scale(.9)!important}
 .fab-ai{background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 4px 16px rgba(122,226,58,.38);animation:bi .6s .4s cubic-bezier(.34,1.56,.64,1) both;padding:0;overflow:hidden}
-.fab-ai img{width:36px;height:36px;object-fit:contain;display:block}
+.fab-ai .b-ava{width:100%;height:100%;font-size:24px;background:none}
 .fab-wa{background:#25d366;box-shadow:0 4px 16px rgba(37,211,102,.38);animation:bi .6s .6s cubic-bezier(.34,1.56,.64,1) both}
 .fab-wa svg{width:26px;height:26px;fill:#fff;animation:swing 2.5s ease-in-out 2s infinite}
 .fab::before{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid;opacity:.18;animation:fp 2.8s infinite}
