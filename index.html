@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bruno Freitas | Nutricionista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+<canvas id="nc"></canvas>
+
+<!-- ════════════════════════════════
+     HOME
+════════════════════════════════ -->
+<div class="pg" id="home">
+  <div class="home-wrap">
+
+    <div class="hdr">
+      <div class="avatar-shell">
+        <div class="avatar-ring"></div>
+        <div class="avatar-inner">
+          <img src="assets/images/brunoperfil.jpeg" alt="Bruno Freitas">
+        </div>
+      </div>
+      <div class="cname">Bruno Freitas</div>
+      <div class="ctag">Nutricionista · CRN-16393 &nbsp;|&nbsp; João Pessoa</div>
+      <div class="cbio">Especialista em Nutrição Esportiva<br>Graduando em Ed. Física · Online e Presencial</div>
+      <div class="badges">
+        <span class="badge">Nutrição Esportiva</span>
+        <span class="badge">Emagrecimento</span>
+        <span class="badge">Reeducação Alimentar</span>
+        <span class="badge">Online</span>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="sn" data-t="6962">0</div><div class="sl">Seguidores</div></div>
+      <div class="ss"></div>
+      <div class="stat"><div class="sn" data-t="306">0</div><div class="sl">Publicações</div></div>
+      <div class="ss"></div>
+      <div class="stat"><div class="sn" data-t="500">0</div><div class="sl">Pacientes</div></div>
+    </div>
+
+    <!-- Bruno Card (vídeo) -->
+    <div class="bruno-card">
+      <div class="bruno-card-photo" style="position:relative;cursor:pointer" onclick="togglePlayPause()">
+        <video id="brunoVideo" width="100%" height="100%" autoplay muted loop playsinline preload="auto" style="display:block">
+          <source src="https://a2m74lnysd8dcmsj.public.blob.vercel-storage.com/bruno-hq.mp4" type="video/mp4">
+        </video>
+        <button id="videoSoundBtn" onclick="toggleMute(event)" style="position:absolute;top:12px;right:12px;background:rgba(10,15,10,.75);border:1px solid var(--g);color:var(--g);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;z-index:10;box-shadow:0 4px 12px rgba(0,0,0,.5);transition:all .2s">🔇</button>
+        <div id="playOverlay" style="position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;z-index:5">
+          <span style="font-size:42px;color:var(--g)">⏸</span>
+        </div>
+        <div class="bruno-card-photo-grad"></div>
+      </div>
+      <div class="bruno-card-text">
+        <div class="bruno-card-tag">Nutricionista Esportivo · CRN-16393</div>
+        <div class="bruno-card-name">Bruno Freitas</div>
+        <div class="bruno-card-crn">Nutricionista CRN-16393 · Graduando em Educação Física · João Pessoa, PB</div>
+      </div>
+    </div>
+
+    <!-- Link cards -->
+    <div class="links">
+      <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20quero%20agendar%20uma%20consulta." class="lcard" target="_blank" rel="noopener">
+        <div class="cico wa-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+        <div class="ctxt"><div class="ct">Agendar consulta</div><div class="cs">WhatsApp · Atendimento online e presencial</div></div>
+        <div class="carr">→</div>
+      </a>
+      <div class="lcard" onclick="go('page-sobre')">
+        <div class="cico cal-ico photo-ico"><img src="assets/images/brunoquemsou.jpeg" alt="Bruno Freitas"></div>
+        <div class="ctxt"><div class="ct">Quem sou</div><div class="cs">Conheça minha trajetória e especialização</div></div>
+        <div class="carr">→</div>
+      </div>
+      <div class="lcard" onclick="go('page-servicos')">
+        <div class="cico nut-ico">📋</div>
+        <div class="ctxt"><div class="ct">Serviços & Planos</div><div class="cs">Atendimento presencial e online · Veja os planos</div></div>
+        <div class="carr">→</div>
+      </div>
+      <a href="https://www.instagram.com/brunofreitasnutri" class="lcard" target="_blank" rel="noopener">
+        <div class="cico ig-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ig-g" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><path fill="url(#ig-g)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+        <div class="ctxt"><div class="ct">Instagram</div><div class="cs">@brunofreitasnutri · 6.962 seguidores</div></div>
+        <div class="carr">→</div>
+      </a>
+      <div class="lcard" onclick="go('page-chat')">
+        <div class="cico cal-ico photo-ico"><img src="assets/mascotes/mascotefeliz.svg" alt="Evo"></div>
+        <div class="ctxt"><div class="ct">Tire suas dúvidas com a Evo</div><div class="cs">Nutrição, treino, dieta · Assistente online</div></div>
+        <div class="carr">→</div>
+      </div>
+      <a href="mailto:Brunofreitasnutri@hotmail.com" class="lcard">
+        <div class="cico mail-ico">✉️</div>
+        <div class="ctxt"><div class="ct">E-mail</div><div class="cs">Brunofreitasnutri@hotmail.com</div></div>
+        <div class="carr">→</div>
+      </a>
+    </div>
+
+    <!-- Conteúdo & Dicas -->
+    <div class="dv"><div class="dl"></div><div class="dt">Conteúdo & Dicas</div><div class="dl"></div></div>
+    <div class="motiv-wrap">
+      <div class="motiv-scroll">
+        <div class="mcard" onclick="go('page-servicos')">
+          <div class="mcard-media">
+            <div class="mcard-overlay">
+              <div class="mq-icon">💪</div>
+              <div class="mq-text">"Nutrição é a base de qualquer resultado."</div>
+              <div class="mq-tag">Nutrição Esportiva</div>
+            </div>
+          </div>
+          <div class="mcard-foot"><div class="mcard-label">Performance</div><div class="mcard-brand">BF Nutri</div></div>
+        </div>
+        <div class="mcard" onclick="go('page-servicos')">
+          <div class="mcard-media">
+            <div class="mcard-overlay">
+              <div class="mq-icon">🔥</div>
+              <div class="mq-text">"Emagrecer com saúde é ciência, não milagre."</div>
+              <div class="mq-tag">Emagrecimento</div>
+            </div>
+          </div>
+          <div class="mcard-foot"><div class="mcard-label">Emagrecimento</div><div class="mcard-brand">BF Nutri</div></div>
+        </div>
+        <div class="mcard" onclick="go('page-sobre')">
+          <div class="mcard-media">
+            <div class="mcard-overlay">
+              <div class="mq-icon">👨🏻‍⚕️</div>
+              <div class="mq-text">"10 anos transformando vidas com ciência e dedicação."</div>
+              <div class="mq-tag">Quem Sou</div>
+            </div>
+          </div>
+          <div class="mcard-foot"><div class="mcard-label">Sobre Bruno</div><div class="mcard-brand">BF Nutri</div></div>
+        </div>
+        <div class="mcard" onclick="go('page-servicos')">
+          <div class="mcard-media">
+            <div class="mcard-overlay">
+              <div class="mq-icon">🥑</div>
+              <div class="mq-text">"Comer bem não é castigo, é estilo de vida."</div>
+              <div class="mq-tag">Reeducação Alimentar</div>
+            </div>
+          </div>
+          <div class="mcard-foot"><div class="mcard-label">Alimentação</div><div class="mcard-brand">BF Nutri</div></div>
+        </div>
+        <div class="mcard" onclick="go('page-chat')">
+          <div class="mcard-media">
+            <div class="mcard-overlay">
+              <div class="mq-icon">🤖</div>
+              <div class="mq-text">"Tire suas dúvidas agora com a Evo."</div>
+              <div class="mq-tag">Assistente IA</div>
+            </div>
+          </div>
+          <div class="mcard-foot"><div class="mcard-label">Pergunte Agora</div><div class="mcard-brand">BF Nutri</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seletor de objetivos -->
+    <div class="dv"><div class="dl"></div><div class="dt">Qual é o seu objetivo?</div><div class="dl"></div></div>
+    <div class="symp-wrap">
+      <div class="symp-grid">
+        <button class="sc" onclick="sym(this,'emagrecer')">🔥 Emagrecer</button>
+        <button class="sc" onclick="sym(this,'ganharmusculo')">💪 Ganhar músculo</button>
+        <button class="sc" onclick="sym(this,'performance')">🏃 Performance</button>
+        <button class="sc" onclick="sym(this,'saude')">❤️ Saúde geral</button>
+        <button class="sc" onclick="sym(this,'reeducacao')">🥗 Reeducação</button>
+        <button class="sc" onclick="sym(this,'crianca')">👶 Nutrição infantil</button>
+        <button class="sc" onclick="sym(this,'vegetariano')">🌱 Vegetariano/Vegano</button>
+        <button class="sc" onclick="sym(this,'exames')">🔬 Ajustar exames</button>
+      </div>
+      <div class="sr" id="sr"></div>
+    </div>
+
+    <!-- Depoimentos -->
+    <div class="dv"><div class="dl"></div><div class="dt">O que dizem os pacientes</div><div class="dl"></div></div>
+    <div class="test-wrap"><div class="test-track" id="tt"></div></div>
+
+    <div class="foot">
+      <div class="ft">
+        📍 João Pessoa, PB &nbsp;·&nbsp; Online para todo o Brasil<br>
+        📱 <a href="https://wa.me/5583999953846">WhatsApp</a> &nbsp;·&nbsp;
+        <a href="https://instagram.com/brunofreitasnutri">@brunofreitasnutri</a>
+      </div>
+      <div class="fb">Evolvify · 2025</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FABs -->
+<div class="fabs" id="home-fabs">
+  <div class="fab-ai-wrap">
+    <span class="fab-ai-label">Tira dúvidas com a Evo</span>
+    <button class="fab fab-ai" onclick="go('page-chat')" title="Tira dúvidas com a Evo">
+      <img src="assets/mascotes/mascotefeliz.svg" alt="Evo">
+    </button>
+  </div>
+  <a class="fab fab-wa" href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20quero%20agendar%20minha%20consulta." target="_blank" rel="noopener" title="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+
+<!-- ════════════════════════════════
+     QUEM SOU
+════════════════════════════════ -->
+<div class="pg subpg" id="page-sobre">
+  <div class="sp-head">
+    <button class="back-btn" onclick="back()">←</button>
+    <div class="sp-title">Quem Sou</div>
+  </div>
+  <div class="sp-body">
+    <div class="sobre-foto">
+      <img src="assets/images/brunoquemsoudentro.jpeg" alt="Bruno Freitas Nutricionista">
+    </div>
+    <div class="exp-badges">
+      <span class="exp-b">+10 anos de experiência</span>
+      <span class="exp-b">Nutricionista desde 2015</span>
+      <span class="exp-b">Especialista Esportivo</span>
+      <span class="exp-b">500+ pacientes</span>
+      <span class="exp-b">Online & Presencial</span>
+    </div>
+    <div class="sobre-block">
+      <div class="sobre-label">Trajetória</div>
+      <div class="sobre-txt">Sou nutricionista formado desde <strong>2015</strong>, especialista em Nutrição Esportiva, com <strong>mais de 10 anos de experiência prática</strong> no acompanhamento de pacientes dentro de academias, atuando diretamente com diferentes perfis, objetivos e níveis de condicionamento físico.</div>
+    </div>
+    <div class="sobre-block">
+      <div class="sobre-label">Áreas de Atuação</div>
+      <div class="sobre-txt">Minha atuação engloba tanto a <strong>nutrição clínica quanto a esportiva</strong>, com foco em emagrecimento, hipertrofia muscular, melhora da performance, reeducação alimentar e qualidade de vida.<br><br>Também possuo experiência no acompanhamento nutricional de pacientes com <strong>diabetes, hipertensão, resistência à insulina, colesterol e triglicerídeos elevados</strong>, sempre priorizando saúde, segurança e resultados sustentáveis.</div>
+    </div>
+    <div class="sobre-block">
+      <div class="sobre-label">Minha Abordagem</div>
+      <div class="sobre-txt">Ao longo da minha trajetória, desenvolvi uma abordagem <strong>prática e individualizada</strong>, respeitando a rotina, preferências e realidade de cada paciente. Acredito que uma alimentação eficiente precisa ser aplicável no dia a dia, sem extremismos, promovendo resultados <strong>consistentes e duradouros</strong>.</div>
+    </div>
+    <div class="sobre-block">
+      <div class="sobre-label">Meu Objetivo</div>
+      <div class="sobre-txt">Oferecer um acompanhamento <strong>completo, humanizado e baseado em evidências científicas</strong>, auxiliando cada paciente a alcançar seus objetivos com equilíbrio, estratégia e constância.</div>
+    </div>
+    <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%2C%20vi%20seu%20perfil%20e%20quero%20agendar%20uma%20consulta." class="cta-btn" target="_blank" rel="noopener">Agendar consulta com Bruno</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVIÇOS & PLANOS
+════════════════════════════════ -->
+<div class="pg subpg" id="page-servicos">
+  <div class="sp-head">
+    <button class="back-btn" onclick="back()">←</button>
+    <div class="sp-title">Serviços & Planos</div>
+  </div>
+  <div class="sp-body">
+    <div class="cat-tabs">
+      <button class="ctab on" onclick="ctab(this,'srv-presencial')">🏋️ Presencial</button>
+      <button class="ctab" onclick="ctab(this,'srv-online')">🌐 Online</button>
+      <button class="ctab" onclick="ctab(this,'srv-planos')">💰 Planos</button>
+    </div>
+
+    <div class="cat-pane on" id="srv-presencial">
+      <div class="cat-hero-row">
+        <div class="cat-ico" style="background:rgba(122,226,58,.1);border:1px solid rgba(122,226,58,.18)">🌿</div>
+        <div><div class="cat-name">Atendimento Presencial</div><div class="cat-sub">Personalizado e baseado em evidências</div></div>
+      </div>
+      <p class="cat-desc">Transforme sua alimentação, melhore sua saúde, performance e composição corporal com um acompanhamento completo, individualizado e baseado em evidências científicas.</p>
+      <div class="srv-block">
+        <div class="srv-head"><div class="srv-ico">📏</div><div><div class="srv-ttl">Avaliação Antropométrica Completa</div><div class="srv-sub">Análise detalhada da composição corporal</div></div></div>
+        <ul class="blist">
+          <li>Percentual de gordura e massa magra via adipômetro científico</li>
+          <li>Circunferências corporais, peso, altura, IMC e RCQ</li>
+          <li>Análise detalhada para estratégias mais eficientes</li>
+          <li>Acompanhamento da evolução física de forma objetiva e segura</li>
+        </ul>
+      </div>
+      <div class="srv-block">
+        <div class="srv-head"><div class="srv-ico">🥗</div><div><div class="srv-ttl">Plano Alimentar Personalizado</div><div class="srv-sub">Elaborado a partir de anamnese completa</div></div></div>
+        <ul class="blist">
+          <li>Anamnese completa e individualizada</li>
+          <li>Adaptado à sua rotina, objetivos e preferências</li>
+          <li>Estratégias práticas para o dia a dia</li>
+          <li>Suporte contínuo via WhatsApp</li>
+          <li>Revisões e ajustes ao longo do acompanhamento</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20quero%20saber%20mais%20sobre%20o%20Atendimento%20Presencial." class="cta-btn" target="_blank" rel="noopener">Agendar atendimento presencial</a>
+    </div>
+
+    <div class="cat-pane" id="srv-online">
+      <div class="cat-hero-row">
+        <div class="cat-ico" style="background:rgba(90,170,255,.1);border:1px solid rgba(90,170,255,.18)">🌐</div>
+        <div><div class="cat-name">Atendimento Online</div><div class="cat-sub">Para todo o Brasil · 100% remoto</div></div>
+      </div>
+      <p class="cat-desc">Transforme sua alimentação, melhore sua performance e alcance seus objetivos com acompanhamento completo, individualizado e totalmente online.</p>
+      <div class="srv-block">
+        <div class="srv-head"><div class="srv-ico">📊</div><div><div class="srv-ttl">Avaliação Física Online</div><div class="srv-sub">Tecnologia Body3D + Inteligência Artificial</div></div></div>
+        <ul class="blist">
+          <li>Análise da composição corporal via tecnologia Body3D</li>
+          <li>Monitoramento de gordura e massa corporal por IA e imagens padronizadas</li>
+          <li>Comparação da evolução corporal ao longo do acompanhamento</li>
+          <li>Avaliação da rotina, hábitos, treinos e objetivos</li>
+        </ul>
+      </div>
+      <div class="srv-block">
+        <div class="srv-head"><div class="srv-ico">🥗</div><div><div class="srv-ttl">Plano Alimentar Personalizado</div><div class="srv-sub">Desenvolvido a partir de anamnese detalhada</div></div></div>
+        <ul class="blist">
+          <li>Anamnese detalhada e individualizada</li>
+          <li>Adaptado à sua rotina, preferências e objetivos</li>
+          <li>Estratégias práticas e aplicáveis no dia a dia</li>
+          <li>Suporte contínuo via WhatsApp</li>
+          <li>Revisões periódicas do plano</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20quero%20saber%20mais%20sobre%20o%20Atendimento%20Online." class="cta-btn" target="_blank" rel="noopener">Começar atendimento online</a>
+    </div>
+
+    <div class="cat-pane" id="srv-planos">
+      <div class="plan-highlight">
+        <div class="plan-badge">Melhor custo-benefício</div>
+        <div class="plan-name">Plano Trimestral</div>
+        <div class="plan-desc">Acompanhamento nutricional completo durante 90 dias. Ideal para quem busca resultados consistentes, maior acompanhamento e evolução contínua.</div>
+        <div class="plan-price"><span class="plan-price-unit">3x</span> R$ 215<span style="font-size:16px">,04</span></div>
+        <div class="plan-price-note">ou à vista com condições especiais</div>
+        <div class="plan-perks">
+          <div class="plan-perk">90 dias de acompanhamento completo</div>
+          <div class="plan-perk">Maior tempo para resultados consistentes</div>
+          <div class="plan-perk">Mais ajustes e suporte durante o processo</div>
+          <div class="plan-perk">Avaliação física + plano alimentar personalizado</div>
+          <div class="plan-perk">Suporte via WhatsApp durante todo o período</div>
+        </div>
+        <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20tenho%20interesse%20no%20Plano%20Trimestral." class="cta-btn" target="_blank" rel="noopener">Quero o Plano Trimestral</a>
+      </div>
+      <div class="plan-regular">
+        <div class="plan-name">Plano Mensal</div>
+        <div class="plan-desc">Acompanhamento nutricional completo durante 30 dias, com suporte individualizado e acompanhamento contínuo da sua evolução.</div>
+        <div class="plan-price">R$ 279<span style="font-size:16px">,99</span></div>
+        <div class="plan-price-note">por mês</div>
+        <div class="plan-perks">
+          <div class="plan-perk">30 dias de acompanhamento completo</div>
+          <div class="plan-perk">Avaliação física + plano alimentar personalizado</div>
+          <div class="plan-perk">Ajustes quando necessário</div>
+          <div class="plan-perk">Suporte via WhatsApp</div>
+        </div>
+        <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20tenho%20interesse%20no%20Plano%20Mensal." class="cta-btn" style="background:transparent;border:1.5px solid rgba(122,226,58,.35);color:var(--g);box-shadow:none" target="_blank" rel="noopener">Quero o Plano Mensal</a>
+      </div>
+      <div style="text-align:center;padding:10px 0 4px">
+        <p style="font-size:11.5px;color:var(--dim);line-height:1.6">Dúvidas sobre qual plano escolher?<br>
+        <a href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20tenho%20d%C3%BAvidas%20sobre%20os%20planos." style="color:var(--g);font-weight:600" target="_blank" rel="noopener">Fale diretamente com o Bruno →</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     RESULTADOS REAIS
+════════════════════════════════ -->
+<div class="pg subpg" id="page-clients">
+  <div class="sp-head">
+    <button class="back-btn" onclick="back()">←</button>
+    <div class="sp-title">Resultados Reais</div>
+  </div>
+  <div class="sp-body">
+    <div class="cli-stats">
+      <div class="cs-box"><div class="cs-v">500+</div><div class="cs-l">Pacientes</div></div>
+      <div class="cs-box"><div class="cs-v">98%</div><div class="cs-l">Satisfação</div></div>
+      <div class="cs-box"><div class="cs-v">5 ★</div><div class="cs-l">Avaliação</div></div>
+    </div>
+    <div class="dep-strip">
+      <div class="dep-quote">"</div>
+      <div>
+        <div class="dep-body">Perdi <strong>12kg em 3 meses</strong> sem passar fome. O plano do Bruno é completamente diferente de tudo que já tentei. Aprendi a comer de verdade!</div>
+        <div class="dep-name">— Camila S., 28 anos · Emagrecimento</div>
+      </div>
+    </div>
+    <div class="cli-card"><div class="cli-info">
+      <div class="cli-top"><div class="cli-ava">💪</div><div><div class="cli-nm">Rafael M.</div><div class="cli-mt">32 anos · João Pessoa</div></div><div class="cli-stars">★★★★★</div></div>
+      <div class="cli-txt">"Com a nutrição esportiva do Bruno minha <strong>performance no crossfit mudou completamente</strong>. Ganhei 4kg de massa em 2 meses com disposição total nos treinos."</div>
+      <div class="cli-tag">Nutrição Esportiva</div>
+    </div></div>
+    <div class="cli-card"><div class="cli-info">
+      <div class="cli-top"><div class="cli-ava">🏃</div><div><div class="cli-nm">Larissa T.</div><div class="cli-mt">25 anos · Online</div></div><div class="cli-stars">★★★★★</div></div>
+      <div class="cli-txt">"Sempre tive dificuldade em correr. Com a orientação nutricional para corrida, <strong>completei minha primeira meia maratona</strong> sem colapsar. Bruno é excepcional!"</div>
+      <div class="cli-tag">Nutrição Esportiva · Corrida</div>
+    </div></div>
+    <div class="cli-card"><div class="cli-info">
+      <div class="cli-top"><div class="cli-ava">🥗</div><div><div class="cli-nm">Fernanda L.</div><div class="cli-mt">41 anos · Online</div></div><div class="cli-stars">★★★★★</div></div>
+      <div class="cli-txt">"Tinha resistência à insulina e colesterol alto. Com o acompanhamento clínico do Bruno meus <strong>exames normalizaram em 4 meses</strong>. Sem remédio!"</div>
+      <div class="cli-tag">Nutrição Clínica</div>
+    </div></div>
+    <div class="cli-card"><div class="cli-info">
+      <div class="cli-top"><div class="cli-ava">🔥</div><div><div class="cli-nm">Paulo R.</div><div class="cli-mt">38 anos · Recife</div></div><div class="cli-stars">★★★★★</div></div>
+      <div class="cli-txt">"Tentei emagrecer com várias dietas e nunca conseguia manter. Com a reeducação alimentar do Bruno <strong>perdi 18kg e não voltei nenhum</strong>. É totalmente diferente!"</div>
+      <div class="cli-tag">Reeducação Alimentar</div>
+    </div></div>
+    <div class="cli-card"><div class="cli-info">
+      <div class="cli-top"><div class="cli-ava">✨</div><div><div class="cli-nm">Juliana K.</div><div class="cli-mt">22 anos · Online</div></div><div class="cli-stars">★★★★★</div></div>
+      <div class="cli-txt">"Nunca pensei que ia me identificar tanto com um nutricionista. O atendimento online é muito prático e o <strong>suporte no WhatsApp faz toda a diferença</strong>."</div>
+      <div class="cli-tag">Atendimento Online</div>
+    </div></div>
+    <a class="cli-cta" href="https://wa.me/5583999953846?text=Ol%C3%A1%20Bruno!%20Quero%20contar%20meu%20resultado." target="_blank" rel="noopener">Compartilhe o seu resultado 💬</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     CHAT — Evo
+════════════════════════════════ -->
+<div class="pg subpg" id="page-chat">
+  <div class="sp-head">
+    <button class="back-btn" onclick="back()">←</button>
+    <div class="sp-title"><span class="ai-dot"></span>Evo</div>
+    <a class="handoff-btn" href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20quero%20falar%20com%20o%20Bruno." target="_blank" rel="noopener">👤 Bruno</a>
+  </div>
+  <div class="handoff-bar">
+    <div class="handoff-txt">Prefere falar direto com o Bruno?</div>
+    <a class="handoff-btn" href="https://wa.me/5583999953846?text=Vim%20pelo%20biolink%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20nutri%C3%A7%C3%A3o." target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+  <div class="chat-area" id="chat-area"></div>
+  <div class="chat-bottom">
+    <div class="chat-qr" id="chat-qr"></div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     SCRIPTS — ordem de dependência
+════════════════════════════════ -->
+<script src="chatbot/config.js"></script>
+<script src="chatbot/flows.js"></script>
+<script src="chatbot/engine.js"></script>
+<script src="data/testimonials.js"></script>
+<script src="data/smap.js"></script>
+<script src="js/video.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
